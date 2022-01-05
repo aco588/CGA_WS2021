@@ -1,0 +1,35 @@
+{
+    "name": "three-csg",
+    "version": "0.0.1",
+    "description": "CSG (Constructive Solid Geometry) library for three.js",
+    "repository": "https://github.com/SebiTimeWaster/three-csg",
+    "main": "src/main.js",
+    "scripts": {
+        "build": "node node_modules/rollup/dist/bin/rollup -c",
+        "patch": "git checkout master && git pull origin master && npm run build && npm version patch",
+        "minor": "git checkout master && git pull origin master && npm run build && npm version minor",
+        "major": "git checkout master && git pull origin master && npm run build && npm version major"
+    },
+    "keywords": [
+        "csg",
+        "parametric",
+        "modeling",
+        "threejs",
+        "three.js",
+        "three"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "@rollup/plugin-alias": "^3.1.0",
+        "eslint": "^7.1.0",
+        "rollup": "^2.10.9",
+        "rollup-plugin-terser": "^6.1.0",
+        "terser": "^4.7.0"
+    },
+    "prettier": {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 150,
+        "tabWidth": 4
+    }
+}
